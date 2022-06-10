@@ -94,3 +94,155 @@
 // }
 // console.log(getDiscount(6000));
 //25  тернарний оператор ==========================
+// +++звичайна подача:
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+
+//   if (ordered > available) {
+//     message = 'Not enough goods in stock!';
+//   } else {
+//     message = 'The order is accepted, our manager will contact you';
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkStorage(10, 11));
+// console.log(checkStorage(10, 4));
+// ++++ тернарний :
+// function checkStorage(available, ordered) {
+//   let message;
+//   message =
+//     ordered > available
+//       ? 'Not enough goods in stock!'
+//       : 'The order is accepted, our manager will contact you';
+
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkStorage(10, 11));
+// console.log(checkStorage(10, 4));
+
+// 27 SWITCH====================
+
+// function getSubscriptionPrice(type) {
+//   let price;
+//   if (type === 'starter') {
+//     price = 0;
+//   } else if (type === 'professional') {
+//     price = 20;
+//   } else if (type === 'organization') {
+//     price = 50;
+//   }
+//   return price;
+// }
+// console.log(getSubscriptionPrice('professional'));
+
+// ++++ в SWiTCH (тільки строга ===)
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
+
+//   switch (
+//     type // Change this line
+//   ) {
+//     case 'starter': // Change this line
+//       price = 0; // Change this line
+//       break;
+
+//     case 'professional': // Change this line
+//       price = 20; // Change this line
+//       break;
+
+//     case 'organization': // Change this line
+//       price = 50; // Change this line
+//       break;
+//   }
+
+//   // Change code above this line
+//   return price;
+// }
+// console.log(getSubscriptionPrice('professional'));
+
+//28 ===================================
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+//   // Change code below this line
+
+//   if (password === null) {
+//     message = 'Canceled by user!';
+//   } else if (password === ADMIN_PASSWORD) {
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkPassword());
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+//   // Change code below this line
+
+//   switch (password) {
+//     case null:
+//       message = 'Canceled by user!';
+//       break;
+
+//     case ADMIN_PASSWORD:
+//       message = 'Welcome!';
+//       break;
+
+//     default:
+//       message = 'Access denied, wrong password!';
+//   }
+
+//   // Change code above this line
+//   return message;
+// }
+// console.log(checkPassword('jqueryismyjam'));
+
+// 29========================
+// function getShippingCost(country) {
+//   let message;
+//   // Change code below this line
+//   switch (country) {
+//     case 'China':
+//       message = 'Shipping to China will cost 100 credits';
+//       break;
+
+//     case 'Chile':
+//       message = 'Shipping to Chile will cost 250 credits';
+//       break;
+
+//     case 'Australia':
+//       message = 'Shipping to Australia will cost 170 credits';
+//       break;
+
+//     case 'Jamaica':
+//       message = 'Shipping to Jamaica will cost 120 credits';
+//       break;
+
+//     default:
+//       message = 'Sorry, there is no delivery to your country';
+//   }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(getShippingCost('Jamaica'));
+
+// 30===========================
+function getNameLength(name) {
+  const message = `Name ${name} is ${name.length} characters long`; // Change this line
+
+  return message;
+}
+console.log(getNameLength('Volodymyr Velch'));
+
+// 31 ======================
