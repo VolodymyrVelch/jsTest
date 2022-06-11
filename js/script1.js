@@ -238,11 +238,47 @@
 // console.log(getShippingCost('Jamaica'));
 
 // 30===========================
-function getNameLength(name) {
-  const message = `Name ${name} is ${name.length} characters long`; // Change this line
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
 
-  return message;
-}
-console.log(getNameLength('Volodymyr Velch'));
+//   return message;
+// }
+// console.log(getNameLength('Volodymyr Velch'));
 
 // 31 ======================
+// const courseTopic = 'JavaScript essentials';
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// // Change code above this line
+// console.log(lastElement);
+
+// 33=============
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length <= maxLength) {
+//     result = message;
+//   } else if (message.length > maxLength) {
+//     result = message.slice(message, maxLength) + '...';
+//   }
+//   /// Change code above this line
+//   return result;
+// }
+// console.log(formatMessage('ghjrfdsfsdfa', 5));
+
+// 36=================
+function checkForSpam(message) {
+  let result;
+  // Change code below this line
+  const messagetoLowerCase = message.toLowerCase();
+  result =
+    messagetoLowerCase.includes('spam') || messagetoLowerCase.includes('sale');
+  // Change code above this line
+  return result;
+}
+
+console.log(checkForSpam('message '));
