@@ -75,10 +75,6 @@
 // }
 // console.log(checkStorage(100, 50));
 // console.log(checkStorage(100, 130));
-// console.log(checkStorage(5, 0));
-// console.log(checkStorage(200, 20));
-// console.log(checkStorage(200, 250));
-// console.log(checkStorage(150, 0));
 
 // 4==================
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
@@ -90,3 +86,175 @@
 // console.log('lastElement', fruits[lastElementIndex]);
 
 // 9 ======================
+// Напиши функцію getExtremeElements(array), яка приймає один параметр
+//array - масив елементів довільної довжини.Функція повинна повертати
+// масив з двох елементів - першого і останнього елемента параметра array.
+
+// function getExtremeElements(array) {
+//   // Change code below this line
+
+//   const resultArray = [array[0], array[array.length - 1]];
+//   return resultArray;
+//   // Change code above this line
+// }
+// console.log(getExtremeElements([1, 2, 3, 4, 5])); // повертає [1, 5]
+// console.log(getExtremeElements(['Earth', 'Mars', 'Venus'])); // повертає ["Earth", "Venus"]
+// console.log(getExtremeElements(['apple', 'peach', 'pear', 'banana'])); // повертає ["apple", "banana"]
+
+// !!!!!!!!!!!!!!!!!!
+
+// 10=========================
+// function splitMessage(message, delimeter) {
+//   let words;
+//   // Change code below this line
+//   words = message.split(delimeter);
+//   // Change code above this line
+//   return words;
+// }
+
+// console.log(splitMessage('Mango', '')); //['M', 'a', 'n', 'g', 'o'];
+
+// 12===================
+// function makeStringFromArray(array, delimeter) {
+//   let string;
+//   // Change code below this line
+//   string = array.join(delimeter);
+//   // Change code above this line
+//   return string;
+// }
+
+// console.log(
+//   makeStringFromArray(['Mango', 'hurries', 'to', 'the', 'train'], ' '),
+// );
+// //повертає "Mango hurries to the train"
+// console.log(makeStringFromArray(['M', 'a', 'n', 'g', 'o'], ''));
+// //повертає "Mango"
+// console.log(makeStringFromArray(['top', 'picks', 'for', 'you'], '_'));
+// // повертає "top_picks_for_you"
+
+// 13=============
+// function slugify(title) {
+//   // Change code below this line
+//   let titleLow = title.toLowerCase().split(' ').join('-');
+//   // let slugTitle = slug(title);
+//   // let slugTitle = title;
+
+//   return titleLow;
+//   // Change code above this line
+// }
+// console.log(slugify('Arrays for begginers')); // повертає "arrays-for-begginers"
+// console.log(slugify('English for developer')); // повертає "english-for-developer"
+// console.log(slugify('Ten secrets of JavaScript')); // повертає "ten-secrets-of-javascript"
+// console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); // повертає "how-to-become-a-junior-developer-in-two-weeks"
+
+// 16.========================
+// Напиши функцію makeArray(firstArray, secondArray, maxLength) для створення
+//  нового масиву з усіма елементами двох вихідних firstArray і secondArray.
+//  Параметр maxLength містить максимально допустиму довжину нового масиву.
+
+// Якщо кількість елементів нового масиву більша за maxLength, функція
+//  повинна повернути копію масиву довжиною maxLength елементів.
+//  В іншому випадку функція повинна повернути новий масив повністю.
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   const combainArray = firstArray.concat(secondArray);
+//   const arrayConc = combainArray.slice(0, maxLength);
+
+//   return arrayConc;
+// }
+// console.log(makeArray(['Mango', 'Poly'], ['Ajax', 'Chelsea'], 3));
+// //повертає["Mango", "Poly", "Ajax"]
+// console.log(makeArray(['Mango', 'Poly', 'Houston'], ['Ajax', 'Chelsea'], 4));
+// //повертає["Mango", "Poly", "Houston", "Ajax"]
+
+// for ========================
+// for (let i = 0; i <= 20; i += 1) {
+//   console.log(i);
+// }
+// 18 ---------------------------------
+// Напиши функцію calculateTotal(number), яка приймає ціле число
+//   (параметр number) і повертає суму всіх цілих чисел від одиниці
+//   і до цього числа.Наприклад, якщо number дорівнює 3, то сума -
+//   це 1 + 2 + 3, тобто 6.
+
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+//   // Change code above this line
+// }
+// console.log(calculateTotal(1)); // повертає 1
+// console.log(calculateTotal(3)); // повертає 6
+// console.log(calculateTotal(7)); // повертає 28
+// console.log(calculateTotal(18)); // повертає 171
+// console.log(calculateTotal(24)); // повертає 300
+
+// 19=========================
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// 20=========================
+// Напиши функцію calculateTotalPrice(order), яка приймає один параметр
+// order - масив чисел, і обчислює загальну суму його елементів.Загальна
+// сума елементів повинна зберігатися у змінній total, яка повертається
+// як результат роботи функції.
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (const number of order) {
+//     total += number;
+//   }
+//   // Change code above this line
+//   return total;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4])); // повертає 138
+// console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // повертає 1116
+
+// 21========================
+// Напиши функцію findLongestWordstring), яка приймає довільний рядок,
+//   що складається тільки зі слів, розділених пробілом(параметр string),
+//     і повертає найдовше слово в цьому рядку.
+// function findLongestWord(string) {
+//   // Change code below this line
+//   let arrayDiv = string.split(' ');
+//   let result = arrayDiv[0];
+
+//   for (const word of arrayDiv) {
+//     if (word.length > result.length) {
+//       result = word;
+//     }
+//   }
+//   console.log(result);
+//   // Change code above this line
+// }
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // повертає jumped
+// console.log(findLongestWord('Google do a roll')); // повертає Google
+// console.log(findLongestWord('May the force be with you')); // повертає force
+
+// 22=======================
+// Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив
+// усіх цілих чисел від значення min до max.
+function createArrayOfNumbers(min, max) {
+  const numbers = [min, max];
+  // Change code below this line
+  for (let i = 1 + min; i < max; i += 1) {
+    numbers.push(i);
+    numbers.sort();
+  }
+  // Change code above this line
+  return numbers;
+}
+console.log(createArrayOfNumbers(1, 3)); // повертає [1, 2, 3]
+console.log(createArrayOfNumbers(14, 17)); // повертає [14, 15, 16, 17]
+console.log(createArrayOfNumbers(29, 34)); // повертає [29, 30, 31, 32, 33, 34]
