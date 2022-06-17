@@ -245,16 +245,90 @@
 // 22=======================
 // Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив
 // усіх цілих чисел від значення min до max.
-function createArrayOfNumbers(min, max) {
-  const numbers = [min, max];
-  // Change code below this line
-  for (let i = 1 + min; i < max; i += 1) {
-    numbers.push(i);
-    numbers.sort();
-  }
-  // Change code above this line
-  return numbers;
-}
-console.log(createArrayOfNumbers(1, 3)); // повертає [1, 2, 3]
-console.log(createArrayOfNumbers(14, 17)); // повертає [14, 15, 16, 17]
-console.log(createArrayOfNumbers(29, 34)); // повертає [29, 30, 31, 32, 33, 34]
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [min, max];
+//   // Change code below this line
+//   for (let i = 1 + min; i < max; i += 1) {
+//     numbers.push(i);
+//     numbers.sort();
+//   }
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(1, 3)); // повертає [1, 2, 3]
+// console.log(createArrayOfNumbers(14, 17)); // повертає [14, 15, 16, 17]
+// console.log(createArrayOfNumbers(29, 34)); // повертає [29, 30, 31, 32, 33, 34]
+
+// 23=====================================
+// Напиши функцію filterArray(numbers, value), яка приймає масив
+// чисел(параметр numbers) і повертає новий масив, в якому будуть
+// тільки ті елементи масиву numbers, які більші за значення параметра
+// value(число).
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   let newArray = [];
+//   for (const number of numbers) {
+//     if (number > value) {
+//       newArray.push(number);
+//     }
+//   }
+//   return newArray;
+//   // Change code above this line
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // повертає []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // повертає [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
+// console.log(filterArray());
+// // з випадковим масивом і числом повертає правильний масив
+// //В циклі for використовувався метод push
+
+// 24===========================
+// Функція checkFruit(fruit) приймає рядок з назвою фрукта(параметр fruit),
+//   і перевіряє, чи присутній такий фрукт в масиві fruits.
+
+// Доповни код функції таким чином, що якщо:
+
+// фрукт присутній в масиві, то функція повертає true;
+// фрукт відсутній в масиві, то функція повертає false.
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+//   return fruits.includes(fruit); // Change this line
+// }
+// console.log(checkFruit('plum')); // повертає true
+// console.log(checkFruit('mandarin')); // повертає false
+// console.log(checkFruit('pear')); // повертає true
+// console.log(checkFruit('Pear')); // повертає false
+// console.log(checkFruit('apple')); //повертає true
+// // У функції використовувався метод includes
+
+// 25====================================
+// Спільними елементами масивів називають ті елементи, які присутні у всіх
+// масивах.
+//   Наприклад, у двох масивах[1, 3, 5] і[0, 8, 5, 3] спільними будуть числа
+// 3 і 5, оскільки вони присутні в обох вихідних масивах.А числа 0, 1 і 8
+// присутні тільки в одному з масивів.
+// Напиши функцію getCommonElements(array1, array2), яка отримує два масиви
+//  довільної довжини в параметри array1 і array2, і повертає новий масив,
+//   що складається з тих елементів, які присутні в обох вихідних масивах.
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   let newArray = [];
+//   for (const number of array1) {
+//     if (array2.includes(number)) {
+//       newArray.push(number);
+//     }
+//   }
+
+//   return newArray;
+//   // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
+// // В циклі for використовувалися методи includes і push
