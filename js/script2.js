@@ -113,18 +113,17 @@
 // }
 
 // console.log(splitMessage('Mango', '')); //['M', 'a', 'n', 'g', 'o'];
-  
+
 // 11 ======================
-// Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну 
+// Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну
 // гравірування, залежно від кількості слів і ціни за слово.
 
 // Оголошена функція calculateEngravingPrice(message, pricePerWord).
-//  Ця функція приймає рядок, що складається зі слів, розділених лише пробілами 
+//  Ця функція приймає рядок, що складається зі слів, розділених лише пробілами
 //  (параметр message) та ціну гравірування одного слова (параметр pricePerWord).
 
-// Напиши тіло функції, щоб вона повертала загальну вартість гравірування 
+// Напиши тіло функції, щоб вона повертала загальну вартість гравірування
 // усіх слів в рядку.
-
 
 // function calculateEngravingPrice(message, pricePerWord) {
 //     // Change code below this line
@@ -132,7 +131,7 @@
 //    const arrayLenth= [arraySeparate.length];
 
 //    const messageLenth = Number(arrayLenth);
- 
+
 //    return messageLenth * pricePerWord;
 //     // Change code above this line
 //  }
@@ -292,13 +291,21 @@
 // function filterArray(numbers, value) {
 //   // Change code below this line
 //   let newArray = [];
-//   for (const number of numbers) {
-//     if (number > value) {
-//       newArray.push(number);
+//   // #### ітерація for...of ####
+//   //   for (const number of numbers) {
+//   //     if (number > value) {
+//   //       newArray.push(number);
+//   //     }
+//   //     }
+//   // #### ітерація for ####
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       newArray.push(numbers[i]);
 //     }
 //   }
+
 //   return newArray;
-//   // Change code above this line
+// Change code above this line
 // }
 
 // console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
@@ -306,7 +313,7 @@
 // console.log(filterArray([1, 2, 3, 4, 5], 5)); // повертає []
 // console.log(filterArray([12, 24, 8, 41, 76], 38)); // повертає [41, 76]
 // console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
-// console.log(filterArray());
+// // console.log(filterArray());
 // // з випадковим масивом і числом повертає правильний масив
 // //В циклі for використовувався метод push
 
@@ -339,6 +346,7 @@
 // Напиши функцію getCommonElements(array1, array2), яка отримує два масиви
 //  довільної довжини в параметри array1 і array2, і повертає новий масив,
 //   що складається з тих елементів, які присутні в обох вихідних масивах.
+//
 // function getCommonElements(array1, array2) {
 //   // Change code below this line
 //   let newArray = [];
@@ -358,3 +366,130 @@
 // console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
 // // В циклі for використовувалися методи includes і push
 
+// 28=========================
+// const a = 3 % 0;
+// const b = 4 % 3;
+// const c = 11 % 4;
+// const d = 12 % 7;
+// const e = 8 % 3;
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
+
+// // Значення змінної a - це число 0
+// // Оголошена змінна b
+// // Значення змінної b - це число 1
+// // Оголошена змінна c
+// // Значення змінної c - це число 3
+// // Оголошена змінна d
+// // Значення змінної d - це число 5
+// // Оголошена змінна e
+// // Значення змінної e - це число 2
+
+// 29=============================
+// Напиши функцію getEvenNumbers(start, end), яка повертає масив усіх
+// парних чисел від start до end.Парним вважається число, яке ділиться
+// на 2 без остачі(10 % 2 === 0).
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+//   let newArr = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       newArr.push(i);
+//     }
+//   }
+//   return newArr;
+//   // Change code above this line
+// }
+// console.log(getEvenNumbers(2, 5)); // повертає [2, 4]
+// console.log(getEvenNumbers(3, 11)); //  повертає [4, 6, 8, 10]
+// console.log(getEvenNumbers(6, 12)); //  повертає [6, 8, 10, 12]
+// console.log(getEvenNumbers(8, 8)); // повертає [8]
+// console.log(getEvenNumbers(7, 7)); // повертає []
+
+// 30=================================
+// Доповни код таким чином, щоб у змінну number записувалося перше число
+//  від start до end, яке ділиться на 5 без остачі.
+
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+// console.log(number);
+
+// // Оголошена змінна start зі значенням 6
+// // Оголошена змінна end зі значенням 27
+// // Оголошена змінна number без ініціалізації
+// // Підсумкове значення змінної number дорівнює 10
+// // В циклі for використовується break для виходу до завершення усіх ітерацій
+// // циклу
+
+// 31=================================
+// Виконай рефакторинг функції findNumber(start, end, divisor) таким чином,
+//     щоб вона:
+
+// повертала перше число від start до end, яке ділиться на divisor без
+//остачі
+// не використала оператор break
+// не використала змінну number
+// function findNumber(start, end, divisor) {
+//   // Change code below this line
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       number = i;
+//       return i;
+//     }
+//   }
+
+//   return number;
+//   // Change code above this line
+// }
+// console.log(findNumber(2, 6, 5)); //повертає 5
+// console.log(findNumber(8, 17, 3)); //повертає 9
+// console.log(findNumber(6, 9, 4)); //повертає 8
+// console.log(findNumber(16, 35, 7)); //повертає 21
+
+// В циклі for не повинен використовуватися break для
+// виходу до завершення всіх ітерацій циклу
+
+// 32===========================
+// Напиши функцію includes(array, value), яка робить те саме, що і метод
+//  масиву масив.includes(значення) - перевіряє, чи присутнє в масиві array
+//  значення value, повертаючи true, якщо присутнє, і false в іншому випадку.
+
+// При виконанні цього завдання в тілі функції includes() не можна
+//  використовувати метод масив.includes(значення).
+// function includes(array, value) {
+//   // Change code below this line
+//   let result;
+//   for (let i = 0; i < array.length; i += 1) {
+//     result = array[i] === value;
+//     if (result === true) {
+//       break;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(includes([1, 2, 3, 4, 5], 3)); // повертає true
+// console.log(includes([1, 2, 3, 4, 5], 17)); // повертає false
+// console.log(
+//   includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter'),
+// ); // повертає true
+// console.log(
+//   includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Uranus'),
+// ); // повертає false
+// console.log(includes(['apple', 'plum', 'pear', 'orange'], 'plum')); // повертає true
+// console.log(includes(['apple', 'plum', 'pear', 'orange'], 'kiwi')); // повертає false
+// // У функції includes використовується for, return, але не метод масиву includes
