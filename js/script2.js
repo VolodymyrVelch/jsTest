@@ -235,6 +235,10 @@
 // function calculateTotalPrice(order) {
 //   let total = 0;
 //   // Change code below this line
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+
 //   for (const number of order) {
 //     total += number;
 //   }
@@ -540,16 +544,16 @@
 // }
 // console.log(min);
 
-function minInArray(minss) {
-  let min = minss[0];
-  for (let number of minss) {
-    // console.log(number);
-    if (number < min) {
-      min = number;
-    }
-  }
-  return min;
-}
+// function minInArray(minss) {
+//   let min = minss[0];
+//   for (let number of minss) {
+//     // console.log(number);
+//     if (number < min) {
+//       min = number;
+//     }
+//   }
+//   return min;
+// }
 
-console.log(minInArray([2, 17, 94, 1, 23, 37]));
-console.log(minInArray([222, 170, 94, 121, 23, 37]));
+// console.log(minInArray([2, 17, 94, 1, 23, 37]));
+// console.log(minInArray([222, 170, 94, 121, 23, 37]));
