@@ -280,28 +280,149 @@
 // масив hexColors значення властивостей hex, а в масив rgbColors - значення
 // властивостей rgb з усіх об'єктів масиву colors.
 
-const colors = [
-  { hex: '#f44336', rgb: '244,67,54' },
-  { hex: '#2196f3', rgb: '33,150,243' },
-  { hex: '#4caf50', rgb: '76,175,80' },
-  { hex: '#ffeb3b', rgb: '255,235,59' },
-];
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
 
-const hexColors = [];
-const rgbColors = [];
-// Change code below this line
-
-// for (const color of colors) {
-//   if (color.hex) {
-//     hexColors.push(color.hex);
-//   }
-//   if (color.rgb) {
-//     rgbColors.push(color.rgb);
-//   }
-//   // if (color.key === 'hex') {
-//   //   push.hexColors(Object.values(key));
-//   // }
-//   console.log(rgbColors);
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// /for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
 // }
-// Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
-// Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// // Значення змінної hexColors - це масив ["#f44336", "#2196f3", "#4caf50", "#ffeb3b"]
+// // Значення змінної rgbColors - це масив ["244,67,54", "33,150,243", "76,175,80", "255,235,59"]
+
+// 18=====================================
+// Напиши функцію getProductPrice(productName), яка приймає один параметр
+// productName - назва продукту.Функція шукає об'єкт продукту з таким
+// ім'ям(властивість name) в масиві products і повертає його ціну(властивість
+//    price).Якщо продукт з такою назвою не знайдений, функція повинна
+//     повертати null.
+
+// код
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     }
+//   }
+//   return null;
+//   // Change code above this line
+// }
+
+// console.log(getProductPrice('Radar')); // повертає 1300.
+// console.log(getProductPrice('Grip')); // повертає 1200.
+// console.log(getProductPrice('Scanner')); // повертає 2700.
+// console.log(getProductPrice('Droid')); // повертає 400.
+// console.log(getProductPrice('Engine')); // повертає null.
+
+// 19==========================
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр
+// propName - ім'я (ключ) властивості. Функція повинна повернути масив всіх
+//  значень властивості з таким ім'ям з кожного об'єкта в масиві products.
+//  Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна
+//  повернути порожній масив.
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const array = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty([propName])) {
+//       array.push(product[propName]);
+//     }
+//     // console.log(propName);
+//   }
+//   return array;
+//   // Change code above this line
+// }
+
+// console.log(getAllPropValues('name')); // повертає ["Radar", "Scanner", "Droid", "Grip"]
+// console.log(getAllPropValues('quantity')); //повертає [4, 3, 7, 9]
+// console.log(getAllPropValues('price')); // повертає [1300, 2700, 400, 1200]
+// console.log(getAllPropValues('category')); // повертає []
+
+// 20===================================
+// Напиши функцію calculateTotalPrice(productName), яка приймає один параметр
+// productName - назва товару.Функція повинна повернути загальну вартість
+//   (ціна * кількість) товару з таким ім'ям з масиву products.
+
+// КОД
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let price = 0;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       price = product.price * product.quantity;
+//     }
+//   }
+//   return price;
+
+//   // Change code above this line
+// }
+
+// console.log(calculateTotalPrice('Blaster')); // повертає 0
+// console.log(calculateTotalPrice('Radar')); // повертає 5200
+// console.log(calculateTotalPrice('Droid')); //) повертає 2800
+// console.log(calculateTotalPrice('Grip')); // повертає 10800
+// console.log(calculateTotalPrice('Scanner')); // повертає 8100
+
+// 21=========================================
+// Надійшов триденний прогноз максимальних температур і ми рахуємо середню
+//  температуру за три дні(meanTemperature).Заміни оголошення змінних
+// yesterday, today і tomorrow однією операцією деструктуризації властивостей
+//  об'єкта highTemperatures.
+
+// КОД
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// // Деструктеризація
+// const { yesterday, today, tomorrow } = highTemperatures;
+// console.log(yesterday, today, tomorrow);
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// console.log(meanTemperature);
+
+// 22=========================================
