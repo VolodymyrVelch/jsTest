@@ -466,4 +466,182 @@
 // Значення змінної icon - це рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
 // Використовується деструктуризація об'єкта
 
-// 24==========================================
+// 25==========================================
+
+// Ми отримали прогноз погоди на два дні, з мінімальними і максимальними
+// температурами, а також необов'язковими іконками. Заміни оголошення всіх
+//  змінних однією операцією деструктуризації властивостей об'єкта forecast.
+//  Задай значення за замовчуванням для іконок, змінних todayIcon і
+// tomorrowIcon - рядок "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+// } = forecast;
+
+// // const highToday = forecast.today.high;
+// // const lowToday = forecast.today.low;
+// // const todayIcon = forecast.today.icon;
+
+// // const highTomorrow = forecast.tomorrow.high;
+// // const lowTomorrow = forecast.tomorrow.low;
+// // const tomorrowIcon = forecast.tomorrow.icon;
+// console.log(highTomorrow);
+
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+
+//   console.log(todayLow);
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// console.log(
+//   calculateMeanTemperature({
+//     today: { low: 28, high: 32 },
+//     tomorrow: { low: 25, high: 29 },
+//   }),
+// );
+
+// 29=======================================
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+// console.log(finalSettings);
+
+// 30======================================
+// Напиши функцію makeTask(data) яка приймає один параметр data - об'єкт з
+// наступними властивостями.
+
+// text - текст завдання.
+// category - категорія завдання.
+// priority - пріоритет завдання.
+// Функція повинна створити і повернути новий об'єкт завдання, не змінюючи
+//  напряму параметр data.У новому об'єкті повинна бути властивість completed,
+//   значення якої зберігається в однойменній локальній змінній.
+
+// В параметрі data гарантовано буде тільки властивість text, а інші дві,
+//     category і priority, можуть бути відсутніми.Тоді, в новому об'єкті
+// завдання, у властивостях category і priority повинні бути значення за
+// замовчуванням, що зберігаються в однойменних локальних змінних.
+// function makeTask(data) {
+//   const category = 'General';
+//   const priority = 'Normal';
+//   const completed = false;
+//   Change code below this line
+//   const TaskList = {
+//     category: 'General',
+//     priority: 'Normal',
+//     completed: false,
+//   };
+//   //   const { category, priority, text, completed } = TaskList;
+//   const newList = { ...TaskList, ...data };
+//   return newList;
+//   // Change code above this line
+// }
+// console.log(makeTask({}));
+// // повертає { category: "General", priority: "Normal", completed: false }
+// console.log(
+//   makeTask({
+//     category: 'Homemade',
+//     priority: 'Low',
+//     text: 'Take out the trash',
+//   }),
+// );
+// // повертає { category: "Homemade", priority: "Low", text: "Take out the trash", completed: false }
+// console.log(makeTask({ category: 'Finance', text: 'Take interest' }));
+// // повертає { category: "Finance", priority: "Normal", text: "Take interest", completed: false }
+// console.log(makeTask({ priority: 'Low', text: 'Choose shampoo' }));
+// // повертає { category: "General", priority: "Low", text: "Choose shampoo", completed: false }
+// console.log(makeTask({ text: 'Buy bread' }));
+// // повертає { category: "General", priority: "Normal", text: "Buy bread", completed: false }
+
+// 31==============================
+// Використовуючи операцію rest, доповни код функції add() таким чином, щоб
+//  вона приймала будь - яку кількість аргументів, рахувала і повертала їх
+// суму.
+
+// Change code below this line
+// function add(...args) {
+//   // Change code above this line
+//   let summ = 0;
+//   for (const arg of args) {
+//     summ += arg;
+//   }
+
+//   return summ;
+// }
+
+// // Функція add використовує параметр args
+// // Для збирання аргументів у змінну args, у підписі функції
+// // використовується синтаксис ... (оператор rest)
+
+// console.log(add(15, 27)); // повертає 42
+// console.log(add(12, 4, 11, 48)); // повертає 75
+// console.log(add(32, 6, 13, 19, 8)); // повертає 78
+// console.log(add(74, 11, 62, 46, 12, 36)); // повертає 241
+
+// 32====================================
+// Функція addOverNum() рахує суму всіх аргументів.Зміни параметри і тіло
+//  функції addOverNum() таким чином, щоб вона рахувала суму тільки тих
+// аргументів, які більші за задане число.Це число повинно бути першим
+//  параметром функції.
+// Change code below this line
+// function addOverNum(...args) {
+//   let total = 0;
+
+//   //   for (let i = 0; i < args.length; i++) {
+//   //     let argOf = args[i];
+//   //     if (args[0] < argOf) {
+//   //       total += argOf;
+//   //     }
+//   //   }
+//   // ---------------------------------------
+//   for (let arg of args) {
+//     if (args[0] < arg) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(50, 15, 27)); // повертає 0
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); // повертає 71
+// console.log(addOverNum(15, 32, 6, 13, 19, 8)); // повертає 51
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); // повертає 218
+
+// 33 ====================================
