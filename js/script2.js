@@ -445,10 +445,10 @@
 //остачі
 // не використала оператор break
 // не використала змінну number
-// function findNumber(start, end, divisor) {
-//   // Change code below this line
-//   let number;
 
+// function findNumber(start, end, divisor) {
+//   //   // Change code below this line
+//   let number;
 //   for (let i = start; i < end; i += 1) {
 //     if (i % divisor === 0) {
 //       number = i;
@@ -459,6 +459,7 @@
 //   return number;
 //   // Change code above this line
 // }
+
 // console.log(findNumber(2, 6, 5)); //повертає 5
 // console.log(findNumber(8, 17, 3)); //повертає 9
 // console.log(findNumber(6, 9, 4)); //повертає 8
