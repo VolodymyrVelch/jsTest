@@ -138,9 +138,9 @@
 //       }
 //     }
 //     return onOrderError(pizzaName);
-//     // if(pizzaName===)
 //   },
 // };
+
 // // Change code above this line
 
 // // Callback for onSuccess
@@ -153,21 +153,21 @@
 //   return `Error! There is no pizza with a name ${error} in the assortment.`;
 // }
 
-// // Method calls with callbacks
+// // // Method calls with callbacks
 // pizzaPalace.order('Smoked', makePizza, onOrderError);
 // pizzaPalace.order('Four meats', makePizza, onOrderError);
 // pizzaPalace.order('Big Mike', makePizza, onOrderError);
 // pizzaPalace.order('Vienna', makePizza, onOrderError);
 
-// // Метод order оголошує три параметри
+// // // Метод order оголошує три параметри
 // console.log(pizzaPalace.order('Smoked', makePizza, onOrderError));
-// // повертає "Your order is accepted. Cooking pizza Smoked."
+// // // повертає "Your order is accepted. Cooking pizza Smoked."
 // console.log(pizzaPalace.order('Four meats', makePizza, onOrderError));
-// // повертає "Your order is accepted. Cooking pizza Four meats."
-// console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
-// // повертає "Error! There is no pizza with a name Big Mike in the assortment."
+// // // повертає "Your order is accepted. Cooking pizza Four meats."
+// // console.log(pizzaPalace.order('Big Mike', makePizza, onOrderError));
+// // // повертає "Error! There is no pizza with a name Big Mike in the assortment."
 // console.log(pizzaPalace.order('Vienna', makePizza, onOrderError));
-// // повертає "Error! There is no pizza with a name Vienna in the assortment."
+// // // повертає "Error! There is no pizza with a name Vienna in the assortment."
 
 // 5====================================================
 // Функція calculateTotalPrice(orderedItems) приймає один параметр
@@ -178,24 +178,181 @@
 // Виконай рефакторинг функції таким чином, щоб замість циклу for, вона
 //  використовувала метод forEach.
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
-  // Change code below this line
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
 
-  for (let i = 0; i < orderedItems.length; i += 1) {
-    totalPrice += orderedItems[i];
-  }
+// ---------------------------for-----------------------------------------
+//   // for (let i = 0; i < orderedItems.length; i += 1) {
+//   //   totalPrice += orderedItems[i];
+//   // }
 
-  // Change code above this line
-  return totalPrice;
-}
+// ------------------------forEach-----------------------------------------
+//   orderedItems.forEach(function (orderedItem, index) {
+//     totalPrice += orderedItem;
+//   });
 
-// Оголошена функція calculateTotalPrice(orderedItems)
-// Для перебирання масиву orderedItems використаний метод forEach
+// ---------------------------------------------------------------
+//   // Change code above this line
+//   return totalPrice;
+// }
 
-console.log(calculateTotalPrice([12, 85, 37, 4])); // повертає 138
-console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
-console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // повертає 1116
+// // Оголошена функція calculateTotalPrice(orderedItems)
+// // Для перебирання масиву orderedItems використаний метод forEach
 
-// Виклик функції з випадковими, але валідними аргументами, повертає
-//  правильне значення
+// console.log(calculateTotalPrice([12, 85, 37, 4])); // повертає 138
+// console.log(calculateTotalPrice([164, 48, 291])); // повертає 503
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176])); // повертає 1116
+
+// // Виклик функції з випадковими, але валідними аргументами, повертає
+// //  правильне значення
+
+// 6================================
+// Функція filterArray(numbers, value) приймає масив чисел numbers і
+// повертає новий масив, в якому будуть тільки ті елементи оригінального
+// масиву, які більші за значення параметра value.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона
+//  використовувала метод forEach.
+
+// function filterArray(numbers, value) {
+//
+// V
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   numbers.forEach(function (number) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+//   return filteredNumbers;
+// };
+// // Change code above this line
+// // }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // повертає []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // повертає [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
+
+// 7=============================================
+// Функція getCommonElements(firstArray, secondArray) приймає два масиви
+// довільної довжини в параметри firstArray і secondArray, і повертає новий
+//  масив їхніх спільних елементів, тобто тих, які присутні в обох масивах.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона
+//  використовувала метод forEach.
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   //   for (let i = 0; i < firstArray.length; i += 1) {
+//   //     if (secondArray.includes(firstArray[i])) {
+//   //       commonElements.push(firstArray[i]);
+//   //     }
+//   //   }
+//   firstArray.forEach(function (firsrArrIndex) {
+//     if (secondArray.includes(firsrArrIndex)) {
+//       commonElements.push(firsrArrIndex);
+//     }
+//   });
+
+//   return commonElements;
+//   // Change code above this line
+// }
+
+// console.log(getCommonElements([1, 2, 3], [2, 4])); // повертає [2]
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19])); // повертає [1, 2]
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27])); // повертає [12, 27, 3]
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])); // повертає [10, 30, 40]
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30])); // повертає []
+
+// 10 =============================
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+
+// РІШЕННЯ
+
+// const calculateTotalPrice= (orderedItems) => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) =>{
+//     totalPrice += item;
+//   });
+
+//   return totalPrice;
+// }
+// // Change code above this line
+
+// 11========================================
+
+// // Заміни оголошення функції filterArray() і колбек для методу forEach()
+// // на стрілочні функції.
+// // Change code below this line
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach(number => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // Change code above this line
+//   return filteredNumbers;
+// };
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3)); // повертає [4, 5]
+// console.log(filterArray([1, 2, 3, 4, 5], 4)); // повертає [5]
+// console.log(filterArray([1, 2, 3, 4, 5], 5)); // повертає []
+// console.log(filterArray([12, 24, 8, 41, 76], 38)); // повертає [41, 76]
+// console.log(filterArray([12, 24, 8, 41, 76], 20)); // повертає [24, 41, 76]
+
+// 13========================================
+
+// Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює
+//  кожен елемент, значення якого - це парне число, додаючи до нього значення
+//  параметра value.
+
+// Виконай рефакторинг функції таким чином, щоб вона стала чистою - не
+// змінювала масив чисел numbers, а створювала, наповнювала і повертала
+//  новий масив з оновленими значеннями.
+// const changeEven = (numbers, value) => {
+//   // Change code below this line
+//   const newNumbers = [];
+//   // ---------------------------------------------------
+//   //   for (let i = 0; i < numbers.length; i += 1) {
+//   //     if (numbers[i] % 2 === 0) {
+//   //       newNumbers.push(numbers[i] + value);
+//   //     } else {
+//   //       newNumbers.push(numbers[i]);
+//   //     }
+//   //   }
+//   // --------------------------forEach---------------------
+//   numbers.forEach(number => {
+//     if (number % 2 === 0) {
+//       newNumbers.push(number + value);
+//     } else {
+//       newNumbers.push(number);
+//     }
+//   });
+//   return newNumbers;
+//   // Change code above this line
+// };
+// console.log(changeEven([1, 2, 3, 4, 5], 10)); // повертає новий масив [1, 12, 3, 14, 5]
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); // повертає новий масив [12, 18, 3, 7, 14, 16]
+// console.log(changeEven([17, 24, 68, 31, 42], 100)); // повертає новий масив [17, 124, 168, 31, 142]
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); // повертає новий масив [144, 13, 81, 192, 136, 154]
