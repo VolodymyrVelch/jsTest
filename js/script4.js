@@ -356,3 +356,92 @@
 // console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); // повертає новий масив [12, 18, 3, 7, 14, 16]
 // console.log(changeEven([17, 24, 68, 31, 42], 100)); // повертає новий масив [17, 124, 168, 31, 142]
 // console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); // повертає новий масив [144, 13, 81, 192, 136, 154]
+
+// 19======================================
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// // Change code below this line
+
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// console.log(evenNumbers);
+// const oddNumbers = numbers.filter(number => number % 2 !== 0);
+// console.log(oddNumbers);
+
+// 20========================================
+// Доповни код таким чином, щоб у змінній allGenres був масив всіх жанрів
+// книг(властивість genres) з масиву books, а у змінній uniqueGenres - масив
+// унікальних жанрів, без повторень.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     genres: ['adventure', 'history'],
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     genres: ['fiction', 'mysticism'],
+//   },
+//   {
+//     title: 'Redder Than Blood',
+//     author: 'Tanith Lee',
+//     genres: ['horror', 'mysticism', 'adventure'],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(item => item.genres);
+// const uniqueGenres = allGenres.filter(
+//   (item, index) => allGenres.indexOf(item) === index,
+// );
+// console.table(allGenres);
+// console.table(uniqueGenres);
+// Оголошена змінна books
+// Значення змінної books - це масив об'єктів
+// Оголошена змінна allGenres
+// Значення змінної allGenres - це масив ["adventure", "history", "fiction", "mysticism", "horror", "mysticism", "adventure"]
+// Оголошена змінна uniqueGenres
+// Значення змінної uniqueGenres - це масив ["adventure", "history", "fiction", "mysticism", "horror"]
+// Для обчислення значення змінної allGenders використаний метод flatMap()
+// Для обчислення значення змінної uniqueGenres використаний метод filter()
+// 21======================
+// Використовуючи метод filter(), доповни код таким чином, щоб:
+
+// У змінній topRatedBooks утворився масив книг, рейтинг яких(властивість rating)
+//  більший за або дорівнює значенню змінної MIN_RATING.
+// У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям
+//     (властивість author), яке збігається зі значенням у змінній AUTHOR.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = 'Bernard Cornwell';
+// // Change code below this line
+
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// console.log(topRatedBooks);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+// console.log(booksByAuthor);
+// Оголошена змінна books
+// Значення змінної books - це масив об'єктів
+// Оголошена змінна MIN_RATING
+// Значення змінної MIN_RATING - це число 8
+
+// 22=================================
