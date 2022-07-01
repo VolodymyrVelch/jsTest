@@ -445,3 +445,381 @@
 // Значення змінної MIN_RATING - це число 8
 
 // 22=================================
+// const users = [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female"
+//     }
+//   ]
+
+
+// //   Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала
+// //    масив користувачів, у яких колір очей (властивість eyeColor) збігається зі
+// //     значенням параметра color.
+// const color = "brown";
+// // Change code below this line
+// const getUsersWithEyeColor = function (users, color)  {
+   
+//     return  users.filter(eye => eye.eyeColor === color);
+// };
+// console.log(getUsersWithEyeColor(users, color));
+// // Change code above this line
+
+
+// // Оголошена змінна getUsersWithEyeColor
+// // Змінній getUsersWithEyeColor присвоєна стрілочна функція з параметрами (users, color)
+// // Для перебирання параметра users використовується метод filter()
+// // Якщо значення параметра color - це "blue", функція повертає масив об'єктів 
+// // користувачів з іменами Moore Hensley, Sharlene Bush і Carey Barr
+// // Якщо значення параметра color - це "green", функція повертає масив об'єктів 
+// // користувачів з іменами Ross Vazquez і Elma Head
+// // Якщо значення параметра color - це "brown", функція повертає масив об'єктів
+// //  користувачів з іменами Blackburn Dotson і Sheree Anthony
+// // Якщо значення параметра color - це будь-який інший рядок, функція повертає
+// //  порожній масив
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// 23===================================
+// Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона
+//  повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок 
+//  від minAge до maxAge.
+// const users =[
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male",
+//       age: 37
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female",
+//       age: 34
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male",
+//       age: 24
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female",
+//       age: 21
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male",
+//       age: 27
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male",
+//       age: 38
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female",
+//       age: 39
+//     }
+//   ];
+
+// // Change code below this line
+// const getUsersWithAge = function(users, minAge, maxAge) {
+//    return users.filter(user =>  maxAge > user.age && user.age > minAge);
+// };
+// console.log(getUsersWithAge(users, 20, 30));
+
+// Change code above this line
+
+// Оголошена змінна getUsersWithAge
+// Змінній getUsersWithAge присвоєна стрілочна функція з параметрами (users, minAge,
+//      maxAge)
+// Для перебирання параметра users використовується метод filter()
+// Якщо значення параметрів minAge і maxAge дорівнюють 20 і 30 відповідно, функція
+//  повертає масив об'єктів користувачів з іменами Ross Vazquez, Elma Head і Carey Barr
+// Якщо значення параметрів minAge і maxAge дорівнюють 30 і 40 відповідно, функція
+//  повертає масив об'єктів користувачів з іменами Moore Hensley, Sharlene Bush, Blackburn Dotson, Sheree Anthony
+// Якщо значення параметрів minAge і maxAge дорівнюють 80 і 100 відповідно, функція
+//  повертає порожній масив
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// // 24===================================
+// const users = [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male",
+//       age: 37
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female",
+//       age: 34
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male",
+//       age: 24
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female",
+//       age: 21
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male",
+//       age: 27
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male",
+//       age: 38
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female",
+//       age: 39
+//     }
+//   ];
+
+
+// // Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала
+// //  масив користувачів, у яких є один з ім'ям в параметрі friendName. Масив друзів
+// //   користувача зберігається у властивості friends.
+
+//   // Change code below this line
+// const getUsersWithFriend = function (users, friendName) {
+//    return users.filter(user => user.friends.includes(friendName));
+// };
+// // Change code above this line
+// console.log(getUsersWithFriend(users, "Briana Decker"))
+
+// // Оголошена змінна getUsersWithFriend
+// // Змінній getUsersWithFriend присвоєна стрілочна функція з параметрами (users,friendName)
+// // Для перебирання параметра users використовується метод filter()
+// // Якщо значення параметра friendName - це рядок "Briana Decker", функція повертає
+// //  масив об'єктів користувачів з іменами Sharlene Bush і Sheree Anthony
+// // Якщо значення параметра friendName - це рядок "Goldie Gentry", функція повертає
+// //  масив об'єктів користувачів з іменами Elma Head і Sheree Anthony
+// // Якщо значення параметра friendName - це рядок "Adrian Cross", функція повертає
+// //  порожній масив
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// 25================================
+const users = [
+    {
+      name: "Moore Hensley",
+      email: "moorehensley@indexia.com",
+      eyeColor: "blue",
+      friends: ["Sharron Pace"],
+      isActive: false,
+      balance: 2811,
+      gender: "male",
+      age: 37
+    },
+    {
+      name: "Sharlene Bush",
+      email: "sharlenebush@tubesys.com",
+      eyeColor: "blue",
+      friends: ["Briana Decker", "Sharron Pace"],
+      isActive: true,
+      balance: 3821,
+      gender: "female",
+      age: 34
+    },
+    {
+      name: "Ross Vazquez",
+      email: "rossvazquez@xinware.com",
+      eyeColor: "green",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      isActive: false,
+      balance: 3793,
+      gender: "male",
+      age: 24
+    },
+    {
+      name: "Elma Head",
+      email: "elmahead@omatom.com",
+      eyeColor: "green",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      isActive: true,
+      balance: 2278,
+      gender: "female",
+      age: 21
+    },
+    {
+      name: "Carey Barr",
+      email: "careybarr@nurali.com",
+      eyeColor: "blue",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      isActive: true,
+      balance: 3951,
+      gender: "male",
+      age: 27
+    },
+    {
+      name: "Blackburn Dotson",
+      email: "blackburndotson@furnigeer.com",
+      eyeColor: "brown",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      isActive: false,
+      balance: 1498,
+      gender: "male",
+      age: 38
+    },
+    {
+      name: "Sheree Anthony",
+      email: "shereeanthony@kog.com",
+      eyeColor: "brown",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      isActive: true,
+      balance: 2764,
+      gender: "female",
+      age: 39
+    }
+  ];
+  
+//   Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів
+//    всіх користувачів (властивість friends). У декількох користувачів можуть бути
+//     однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+
+// Change code below this line
+const getFriends = function(users) {
+    const {friends} = users;
+    console.log(friends)
+   return users.filter(user => user.friends.name )
+};
+// Change code above this line
+console.log(getFriends(users.friends));
+
+// Оголошена змінна getFriends
+// Змінній getFriends присвоєна стрілочна функція з параметром (users)
+// Виклик функції із зазначеним масивом користувачів повертає масив 
+// ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
