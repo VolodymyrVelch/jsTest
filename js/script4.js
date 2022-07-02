@@ -511,26 +511,24 @@
 //     }
 //   ]
 
-
 // //   Доповни функцію getUsersWithEyeColor(users, color) таким чином, щоб вона повертала
 // //    масив користувачів, у яких колір очей (властивість eyeColor) збігається зі
 // //     значенням параметра color.
 // const color = "brown";
 // // Change code below this line
 // const getUsersWithEyeColor = function (users, color)  {
-   
+
 //     return  users.filter(eye => eye.eyeColor === color);
 // };
 // console.log(getUsersWithEyeColor(users, color));
 // // Change code above this line
 
-
 // // Оголошена змінна getUsersWithEyeColor
 // // Змінній getUsersWithEyeColor присвоєна стрілочна функція з параметрами (users, color)
 // // Для перебирання параметра users використовується метод filter()
-// // Якщо значення параметра color - це "blue", функція повертає масив об'єктів 
+// // Якщо значення параметра color - це "blue", функція повертає масив об'єктів
 // // користувачів з іменами Moore Hensley, Sharlene Bush і Carey Barr
-// // Якщо значення параметра color - це "green", функція повертає масив об'єктів 
+// // Якщо значення параметра color - це "green", функція повертає масив об'єктів
 // // користувачів з іменами Ross Vazquez і Elma Head
 // // Якщо значення параметра color - це "brown", функція повертає масив об'єктів
 // //  користувачів з іменами Blackburn Dotson і Sheree Anthony
@@ -540,7 +538,7 @@
 
 // 23===================================
 // Доповни функцію getUsersWithAge(users, minAge, maxAge) таким чином, щоб вона
-//  повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок 
+//  повертала масив користувачів, вік яких (властивість age) потрапляє у проміжок
 //  від minAge до maxAge.
 // const users =[
 //     {
@@ -709,7 +707,6 @@
 //     }
 //   ];
 
-
 // // Доповни функцію getUsersWithFriend(users, friendName) таким чином, щоб вона повертала
 // //  масив користувачів, у яких є один з ім'ям в параметрі friendName. Масив друзів
 // //   користувача зберігається у властивості friends.
@@ -732,94 +729,976 @@
 // //  порожній масив
 // // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
 // 25================================
-const users = [
-    {
-      name: "Moore Hensley",
-      email: "moorehensley@indexia.com",
-      eyeColor: "blue",
-      friends: ["Sharron Pace"],
-      isActive: false,
-      balance: 2811,
-      gender: "male",
-      age: 37
-    },
-    {
-      name: "Sharlene Bush",
-      email: "sharlenebush@tubesys.com",
-      eyeColor: "blue",
-      friends: ["Briana Decker", "Sharron Pace"],
-      isActive: true,
-      balance: 3821,
-      gender: "female",
-      age: 34
-    },
-    {
-      name: "Ross Vazquez",
-      email: "rossvazquez@xinware.com",
-      eyeColor: "green",
-      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-      isActive: false,
-      balance: 3793,
-      gender: "male",
-      age: 24
-    },
-    {
-      name: "Elma Head",
-      email: "elmahead@omatom.com",
-      eyeColor: "green",
-      friends: ["Goldie Gentry", "Aisha Tran"],
-      isActive: true,
-      balance: 2278,
-      gender: "female",
-      age: 21
-    },
-    {
-      name: "Carey Barr",
-      email: "careybarr@nurali.com",
-      eyeColor: "blue",
-      friends: ["Jordan Sampson", "Eddie Strong"],
-      isActive: true,
-      balance: 3951,
-      gender: "male",
-      age: 27
-    },
-    {
-      name: "Blackburn Dotson",
-      email: "blackburndotson@furnigeer.com",
-      eyeColor: "brown",
-      friends: ["Jacklyn Lucas", "Linda Chapman"],
-      isActive: false,
-      balance: 1498,
-      gender: "male",
-      age: 38
-    },
-    {
-      name: "Sheree Anthony",
-      email: "shereeanthony@kog.com",
-      eyeColor: "brown",
-      friends: ["Goldie Gentry", "Briana Decker"],
-      isActive: true,
-      balance: 2764,
-      gender: "female",
-      age: 39
-    }
-  ];
-  
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+
 //   Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів
 //    всіх користувачів (властивість friends). У декількох користувачів можуть бути
 //     однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
 
 // Change code below this line
-const getFriends = function(users) {
-    const {friends} = users;
-    console.log(friends)
-   return users.filter(user => user.friends.name )
-};
-// Change code above this line
-console.log(getFriends(users.friends));
+// const getFriends = function (users) {
+//   const allFriend = users.flatMap(user => user.friends);
+//   const friendsFiltred = allFriend.filter(
+//     (friend, index) => allFriend.indexOf(friend) === index,
+//   );
+//   return friendsFiltred;
+// };
+// // Change code above this line
+// console.log(getFriends(users));
 
 // Оголошена змінна getFriends
 // Змінній getFriends присвоєна стрілочна функція з параметром (users)
-// Виклик функції із зазначеним масивом користувачів повертає масив 
+// Виклик функції із зазначеним масивом користувачів повертає масив
 // ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+//
+
+// const allGenres = books.flatMap(item => item.genres);
+// const uniqueGenres = allGenres.filter(
+//   (item, index) => allGenres.indexOf(item) === index,
+// );
+// console
+
+// 26======================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//     age: 37,
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//     age: 34,
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//     age: 24,
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//     age: 21,
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//     age: 27,
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//     age: 38,
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//     age: 39,
+//   },
+// ];
+// // Доповни функцію getActiveUsers(users) таким чином, щоб вона повертала масив
+// //  активних користувачів, значення властивості isActive яких - true.
+// // Change code below this line
+// const getActiveUsers = users => users.filter(user => user.isActive === true);
+
+// console.log(getActiveUsers(users));
+// // Change code above this line
+// // Оголошена змінна getActiveUsers Змінній getActiveUsers присвоєна
+// //  стрілочна функція з параметром users
+// // Для перебирання параметра users використовується метод filter()
+// // Виклик функції із зазначеним масивом користувачів повертає масив об'єктів
+// // користувачів з іменами Sharlene Bush, Elma Head, Carey Barr і Sheree Anthony
+// // Виклик функції з випадковими, але валідними аргументами, повертає правильне
+
+// 30=======================================
+// Використовуючи метод every(), доповни код таким чином, щоб:
+
+// У змінній eachElementInFirstIsEven був результат перевірки
+//  всіх елементів масиву firstArray на парність.
+// У змінній eachElementInFirstIsOdd був результат перевірки
+//  всіх елементів масиву firstArray на непарність.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(index => index % index === 0);
+// const eachElementInFirstIsOdd = firstArray.every(index => index % index !== 0);
+
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+
+// const eachElementInSecondIsEven = secondArray;
+// const eachElementInSecondIsOdd = secondArray;
+
+// const eachElementInThirdIsEven = thirdArray;
+// const eachElementInThirdIsOdd = thirdArray;
+
+// // Оголошена змінна eachElementInFirstIsEven
+// // Значення змінної eachElementInFirstIsEven - це буль true
+// // Оголошена змінна eachElementInFirstIsOdd
+// // Значення змінної eachElementInFirstIsOdd - це буль false
+
+// 34=========================================
+
+// Ігровому сервісу необхідний функціонал підрахунку середнього часу,
+//     проведеного в іграх.Доповни код таким чином, щоб у змінній totalPlayTime
+//      вийшло загальний ігровий час з масиву playtimes.
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+// console.log(playtimes);
+
+// const totalPlayTime = playtimes.reduce(
+//   (previousVal, number) => (previousVal += number),
+//   0,
+// );
+
+// console.log(totalPlayTime);
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+// console.log(averagePlayTime);
+// // Оголошена змінна players
+// // Значення змінної players - це об'єкт гравців з ігровим часом кожного
+// // Оголошена змінна playtimes
+// // Значення змінної playtimes - це масив [1270, 468, 710, 244]
+// // Оголошена змінна totalPlayTime
+// // Значення змінної totalPlayTime - це число 2692
+// // Для перебирання масиву playtimes використовується метод reduce()
+// // Оголошена змінна averagePlayTime
+// // Значення змінної averagePlayTime - це число 673
+
+// 35=============================
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players =>
+//   players.reduce(
+//     (val, player) => (val += player.playtime / player.gamesPlayed),
+//     0,
+//   );
+
+// console.log(totalAveragePlaytimePerGame(players));
+
+// 37==========================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Change code below this line
+// const getTotalFriendCount = users =>
+//   users.reduce((prevVal, user) => (prevVal += user.friends.length), 0);
+
+// // Change code above this line
+
+// console.log(getTotalFriendCount(users));
+
+// 38==================================
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+
+// 39==========================================
+// Онлайн бібіліотеці необхідно відображати книги, відсортовані за датою
+// видання, за її зростанням або спаданням.Доповни код таким чином, щоб у
+//  змінній ascendingReleaseDates вийшла копія масиву releaseDates,
+//   відсортована за зростанням, а у змінній descendingReleaseDates - копія,
+//     відсортована за спаданням.
+
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// console.log(ascendingReleaseDates);
+// console.log(descendingReleaseDates);
+
+// Значення змінної ascendingReleaseDates -
+//   це масив[1967, 1973, 1984, 1997, 2008, 2012, 2016]
+
+// Значення змінної descendingReleaseDates -
+//   це масив[2016, 2012, 2008, 1997, 1984, 1973, 1967]
+
+// 40=====================================
+// Онлайн бібіліотеці необхідно відображати книги, відсортовані за автором,
+//   в алфавітному і зворотному алфавітному порядку.Доповни код таким чином,
+//   щоб у змінній authorsInAlphabetOrder вийшла копія масиву authors,
+//   відсортована за алфавітом, а у змінній authorsInReversedOrder -
+//     копія, відсортована у зворотному алфавітному порядку.
+// const authors = [
+//   'Tanith Lee',
+//   'Bernard Cornwell',
+//   'Robert Sheckley',
+//   'Fyodor Dostoevsky',
+//   'Howard Lovecraft',
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+// Оголошена змінна authors
+// Значення змінної authors - це масив
+// ["Tanith Lee", "Bernard Cornwell", "Robert Sheckley", "Fyodor Dostoevsky", "Howard Lovecraft"]
+// Оголошена змінна authorsInAlphabetOrder
+// Значення змінної authorsInAlphabetOrder - це масив
+// ["Bernard Cornwell", "Fyodor Dostoevsky", "Howard Lovecraft", "Robert Sheckley", "Tanith Lee"]
+// Оголошена змінна authorsInReversedOrder
+// Значення змінної authorsInReversedOrder - це масив
+// ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
+// Використаний метод sort()
+
+// // 41====================================
+// Доповни код таким чином, щоб:
+
+// У змінній sortedByAuthorName вийшов масив книг, відсортований за ім'ям
+//  автора в алфавітному порядку.
+// У змінній sortedByReversedAuthorName вийшов масив книг, відсортований
+//  за ім'ям автора у зворотному алфавітному порядку.
+// У змінній sortedByAscendingRating вийшов масив книг, відсортований за
+//  зростанням рейтингу.
+// У змінній sortedByDescentingRating вийшов масив книг, відсортований за
+//  спаданням рейтингу.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((authorA, authorB) =>
+//   authorA.author.localeCompare(authorB.author),
+// );
+
+// const sortedByReversedAuthorName = [...books].sort((authorA, authorB) =>
+//   authorB.author.localeCompare(authorA.author),
+// );
+
+// const sortedByAscendingRating = [...books].sort(
+//   (ratingA, ratingB) => ratingA.rating - ratingB.rating,
+// );
+
+// const sortedByDescentingRating = [...books].sort(
+//   (ratingA, ratingB) => ratingB.rating - ratingA.rating,
+// );
+
+// console.table(sortedByAuthorName);
+// console.table(sortedByReversedAuthorName);
+// console.table(sortedByAscendingRating);
+// console.table(sortedByDescentingRating);
+
+// // Оголошена змінна books
+// // Значення змінної books - це вихідний масив об'єктів книг
+// // Оголошена змінна sortedByAuthorName
+// // Значення змінної sortedByAuthorName - це масив книг, відсортований
+// // за ім'ям автора в алфавітному порядку
+// // Оголошена змінна sortedByReversedAuthorName
+
+// 42=========================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Доповни функцію sortByAscendingBalance(users) таким чином, щоб вона
+// // повертала масив користувачів, відсортований за зростанням їх балансу
+// //   (властивість balance).
+
+// // Change code below this line
+// const sortByAscendingBalance = users => {
+//   return [...users].sort((balA, balB) => balA.balance - balB.balance);
+// };
+// // Change code above this line
+
+// console.table(users);
+// console.table(sortByAscendingBalance(users));
+
+// Оголошена змінна sortByAscendingBalance
+// Змінній sortByAscendingBalance присвоєна стрілочна функція з параметром (users)
+// Значення параметра users не змінюється
+// Виклик функції із зазначеним масивом користувачів повертає новий масив користувачів, відсортований за зростанням їх балансу
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+// Для перебирання параметра users використаний метод sort()
+
+// 43========================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// // Доповни функцію sortByDescendingFriendCount(users) таким чином,
+// //   щоб вона повертала масив користувачів, відсортований за спаданням
+// //    кількості їхніх друзів(властивість friends).
+// // Change code below this line
+// const sortByDescendingFriendCount = users => {
+//   return users.sort(
+//     (friendA, friendB) => friendA.friends.length - friendB.friends.length,
+//   );
+// };
+// // Change code above this line
+
+// console.log(sortByDescendingFriendCount(users));
+
+// 45============================================
+// Доповни код таким чином, щоб у змінній names вийшов масив імен авторів
+// в алфавітному порядку, рейтинг книг яких більший за значення змінної
+// // MIN_BOOK_RATING.
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   {
+//     title: 'The Dreams in the Witch House',
+//     author: 'Howard Lovecraft',
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books]
+//   .sort((autorA, autorB) => autorA.author.localeCompare(autorB.author))
+//   .filter(rait => rait.rating > MIN_BOOK_RATING)
+//   .map(raitArray => raitArray.author);
+
+// console.table(books);
+// console.table(names);
+
+// // Оголошена змінна books
+// // Значення змінної books - це вихідний масив об'єктів
+// // Оголошена змінна MIN_BOOK_RATING
+// // Значення змінної MIN_BOOK_RATING - це число 8
+// // Оголошена змінна names
+// // Значення змінної names - це масив ["Bernard Cornwell", "Howard Lovecraft", "Robert Sheckley"]
+// // Відсутні оголошені змінні, крім books, MIN_BOOK_RATING і names
+// // Використовується ланцюжок методів filter, map, sort
+
+// 46================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: [
+//       'Jacklyn Lucas',
+//       'Linda Chapman',
+//       'Adrian Cross',
+//       'Solomon Fokes',
+//     ],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+// // Доповни функцію getNamesSortedByFriendCount(users) таким чином, щоб
+// // вона повертала масив імен користувачів, відсортований за зростанням
+// //  кількості їхніх друзів(властивість friends).
+// // Change code below this line
+// const getNamesSortedByFriendCount = users => {
+//   return [...users]
+//     .sort(
+//       (quantFrnA, quantFrnb) =>
+//         quantFrnA.friends.length - quantFrnb.friends.length,
+//     )
+//     .map(friendName => friendName.name);
+// };
+// // Change code above this line
+
+// console.table(users);
+// console.log(getNamesSortedByFriendCount(users));
+
+// // // Оголошена змінна getNamesSortedByFriendCount
+// // // Змінній getNamesSortedByFriendCount присвоєна стрілочна функція з
+// // параметром(users)
+// // // У тілі функції використовується ланцюжок методів
+// // // Значення параметра users не змінюється
+// // // Виклик функції із зазначеним масивом користувачів повертає масив
+// // ["Moore Hensley", "Sharlene Bush", "Elma Head", "Sheree Anthony", "Ross Vazquez", "Carey Barr", "Blackburn Dotson"]
+// // // Виклик функції з випадковими, але валідними аргументами, повертає
+// //  правильне значення
+
+// 47=============================================
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: [
+//       'Jacklyn Lucas',
+//       'Linda Chapman',
+//       'Adrian Cross',
+//       'Solomon Fokes',
+//     ],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// Доповни функцію getSortedFriends(users) таким чином, щоб вона повертала
+//  масив унікальних імен друзів(властивість friends), відсортований за
+// алфавітом.
+// Change code below this line
+// const getSortedFriends = users =>
+//   [...users]
+//     .flatMap(friend => friend.friends)
+//     .sort((sortNameA, sortNameB) => sortNameA.localeCompare(sortNameB))
+//     .filter((uniqName, index, array) => array.indexOf(uniqName) === index);
+
+// // Change code above this line
+
+// // console.table(users);
+// console.table(getSortedFriends(users));
+
+// 48===============================================
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: [
+      'Jacklyn Lucas',
+      'Linda Chapman',
+      'Adrian Cross',
+      'Solomon Fokes',
+    ],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+  },
+];
+
+// Доповни функцію getTotalBalanceByGender(users, gender) таким чином,
+//   щоб вона повертала загальний баланс користувачів(властивість balance),
+//   стать яких(властивість gender) збігається зі значенням параметра
+// gender.
+// Change code below this line
+// const getTotalBalanceByGender = (users, gender) => {
+//   return [...users]
+//     .filter(gend => gend.gender === gender)
+//     .reduce((previousVal, user) => (previousVal += user.balance), 0);
+// };
+// // Change code above this line
+
+// console.table(users);
+// console.log(getTotalBalanceByGender(users, 'male'));
+// console.log(getTotalBalanceByGender(users, 'female'));
+
+// Оголошена змінна getTotalBalanceByGender
+// Змінній getTotalBalanceByGender присвоєна стрілочна функція з параметрами
+// (users, gender)
+// У тілі функції використовується ланцюжок методів в правильному порядку
+// Значення параметра users не змінюється
+// Якщо значення параметра gender - це рядок "male", функція повертає число 12053
+// Якщо значення параметра gender - це рядок "female", функція повертає число 8863
 // Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
