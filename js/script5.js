@@ -195,11 +195,14 @@
 //     this.items.push(newItem);
 //   }
 //   removeItem(removeItem) {
-//     const remov = this.items.includes(removeItem);
-//     this.items.splice(remov, 1);
+//     // const remov = this.items.includes(removeItem);
+//     // this.items.splice(remov, 1);
+//     this.items = this.items.filter(item => item !== removeItem);
+
+//     console.log(removeItem);
 //   }
 // }
-// // Change code above this line
+// // // Change code above this line
 // const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
 // console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 // storage.addItem('Droid');
@@ -292,34 +295,121 @@
 // getBrand() - повертає значення приватної властивості brand.
 //   changeBrand(newBrand) - змінює значення приватної властивості brand на
 // newBrand.
-class Car {
-  // Change code below this line
-  #brand;
-  constructor({ brand, model, price }) {
-    this.#brand = brand;
-    this.model = model;
-    this.price = price;
-  }
-  getBrand() {
-    return this.#brand;
-  }
-  changeBrand(newBrand) {
-    this.#brand = newBrand;
-  }
+// class Car {
+//   // Change code below this line
+//   #brand;
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   getBrand() {
+//     return this.#brand;
+//   }
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
 
-  // Change code above this line
-}
+//   // Change code above this line
+// // }
 
-// Оголошений клас Car
-// Властивість brand в класі Car оголошена приватною
-// Конструктор класу приймає об'єкт з властивостями brand, model і price
-const audi = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
-console.log(audi.brand); // { model: "Q3", price: 36000 }
-const bmw = new Car({ brand: 'bmw', model: 'X5', price: 58900 });
-console.log(bmw); // { model: "X5", price: 58900 }
-const nissan = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
-// В екземпляра відсутня публічна властивість brand
-// Метод getBrand() повертає значення приватної властивості brand.
-console.log(nissan.changeBrand('Honda')); // змінює значення приватної властивості brand на "Honda"
-console.log(nissan); // { model: "Murano", price: 31700 }
-console.log(nissan.getBrand());
+// // Оголошений клас Car
+// // Властивість brand в класі Car оголошена приватною
+// // Конструктор класу приймає об'єкт з властивостями brand, model і price
+// const audi = new Car({ brand: 'Audi', model: 'Q3', price: 36000 });
+// console.log(audi.brand); // { model: "Q3", price: 36000 }
+// const bmw = new Car({ brand: 'bmw', model: 'X5', price: 58900 });
+// console.log(bmw); // { model: "X5", price: 58900 }
+// const nissan = new Car({ brand: 'Nissan', model: 'Murano', price: 31700 });
+// // В екземпляра відсутня публічна властивість brand
+// // Метод getBrand() повертає значення приватної властивості brand.
+// console.log(nissan.changeBrand('Honda')); // змінює значення приватної властивості brand на "Honda"
+// console.log(nissan); // { model: "Murano", price: 31700 }
+// console.log(nissan.getBrand());
+
+// 13====================================
+// Виконай рефакторинг класу Storage, зробивши властивість items приватною.
+
+// Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій
+// послідовності, в якій твій код перевірятимуть тести.Будь ласка, нічого там
+//  не змінюй.
+
+// class Storage {
+//   // Change code below this line
+//   #items;
+//   constructor(items) {
+//     this.#items = items;
+//   }
+
+//   getItems() {
+//     return this.#items;
+//   }
+
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {
+//     this.#items = this.#items.filter(item => item !== itemToRemove);
+//   }
+// }
+
+// // Change code above this line
+
+// // Оголошений клас Storage
+// // Об'єкт storage не містить властивості items
+// // В класі Storage оголошений метод getItems
+// // В класі Storage оголошений метод addItem
+// // В класі Storage оголошений метод removeItem
+// // Властивість items в класі Storage оголошена приватною
+// // Конструктор класу приймає властивість items
+// const storage = new Storage(['Nanitoids', 'Prolonger', 'Antigravitator']);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem('Droid');
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem('Prolonger');
+// console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Droid"]
+
+// 14=================================
+// Виконай рефакторинг класу StringBuilder, зробивши властивість value приватною.
+
+// Під коментарем ми додали ініціалізацію екземпляра і виклики методів у тій
+// послідовності, в якій твій код перевірятимуть тести.Будь ласка, нічого там не
+// змінюй.
+
+// class StringBuilder {
+//   // Change code below this line
+//   #value;
+//   constructor(initialValue) {
+//     this.#value = initialValue;
+//   }
+
+//   getValue() {
+//     return this.#value;
+//   }
+
+//   padEnd(str) {
+//     this.#value += str;
+//   }
+
+//   padStart(str) {
+//     this.#value = str + this.#value;
+//   }
+
+//   padBoth(str) {
+//     this.padStart(str);
+//     this.padEnd(str);
+//   }
+// }
+
+// // Change code above this line
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // "."
+// builder.padStart('^');
+// console.log(builder.getValue()); // "^."
+// builder.padEnd('^');
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth('=');
+// console.log(builder.getValue()); // "=^.^="
+
+// 15=========================================
