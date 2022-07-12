@@ -249,3 +249,131 @@
 // console.log(solution('h')); //, 'h')
 
 // =======================================
+// var number = function (array) {
+//   //your awesome code here
+//   // const newArray = [];
+//   return array.map((n, index) => `${index + 1}: ${n}`);
+
+//   // return newArray;
+// };
+
+// console.log(number([])); //, [], 'Empty array should return empty array');
+// console.log(number(['a', 'b', 'c']));
+// //['1: a', '2: b', '3: c'],
+
+// ====================================
+
+// const areaOrPerimeter = function (l, w) {
+//   // Return your answer
+//   return l === w ? l * w : (l + w) * 2;
+// };
+
+// console.log(areaOrPerimeter(4, 4)); // 16;
+// console.log(areaOrPerimeter(6, 10)); //  32
+
+// ==================================
+// !!!!! reverse  separate words
+
+// function reverseWords(str) {
+//   return str
+//     .split(' ')
+//     .map(word => word.split('').reverse().join(''))
+//     .join(' ');
+// }
+
+// console.log(reverseWords('The quick brown fox jumps over the lazy dog.')); //,
+// // 'ehT kciuq nworb xof spmuj revo eht yzal .god',
+
+// console.log(reverseWords('apple')); //, 'elppa');
+// console.log(reverseWords('a b c d')); //, 'a b c d');
+// console.log(reverseWords('double  spaced  words')); //,
+// // 'elbuod  decaps  sdrow',
+
+// ==========================================
+// function cockroachSpeed(s) {
+//   //Good Luck!
+//   return Math.floor((s * 100000) / 3600);
+// }
+// console.log(cockroachSpeed(1.08)); // , 30);
+// console.log(cockroachSpeed(1.09)); // , 30);
+// console.log(cockroachSpeed(0)); // , 0);
+// ============================
+
+// function firstNonConsecutive(arr) {
+//   // return arr.find((num, index) => num % (index + 1) === 1);
+//   // const array = arr => {
+//   for (let i = 0; i < arr.length; i += 1) {
+//     console.log(arr[i]);
+//   }
+//   //   if (arr[i] % (i + 1) === 1) {
+//   //     return arr[i];
+//   //   } else if (arr[i] / arr[i] !== 0) {
+//   //     return 0;
+//   //   }
+//   // }
+//   // return null;
+// }
+
+// console.log(firstNonConsecutive([-9, -8, -7, -6, -5, -4, 'p', -2, -1])); //6
+
+// =========================================
+// const mult = (p1, p2) => p1 * p2;
+
+// console.log(mult(3, 2));
+// ==================================
+
+// function strCount(str, letter) {
+//   //code here
+//   return str.split('').filter(i => i === letter).length;
+// }
+
+// // .toLowerCase();
+// console.log(strCount('Hello', 'o')); //, 1;
+// console.log(strCount('', 'z')); //, 0;
+// console.log(strCount('Hello', 'l')); //, 2;
+
+// ======================================
+// const findNeedle = haystack =>
+//   `found the needle at position ${haystack.indexOf('needle')}`;
+// //   .find(n, index)=>{
+// //     if (n === 'needle') { `found the needle at position ${index}` }
+// // }
+// // return needLe;
+
+// console.log(
+//   findNeedle([
+//     '3',
+//     '123124234',
+//     undefined,
+//     'needle',
+//     'world',
+//     'hay',
+//     2,
+//     '3',
+//     true,
+//     false,
+//   ]),
+// );
+
+// ========================================
+// function rentalCarCost(d) {
+//   // Your solution here
+//   let price = 40;
+//   // if (d >= 7) {
+//   //   return d * price - 50;
+//   // }
+//   // return d * price - 20;
+//   return d >= 7 ? d * price - 50 : d >= 3 ? d * price - 20 : d * price;
+// }
+
+// console.log(rentalCarCost(1)); //, 40);
+// console.log(rentalCarCost(2)); //, 80);
+// console.log(rentalCarCost(3)); //, 100);
+// console.log(rentalCarCost(4)); //, 140);
+// console.log(rentalCarCost(5)); //, 180);
+// console.log(rentalCarCost(6)); //, 220);
+// console.log(rentalCarCost(7)); //, 230);
+// console.log(rentalCarCost(8)); //, 270);
+// console.log(rentalCarCost(9)); //, 310);
+// console.log(rentalCarCost(10)); //, 350);
+// =====================================
