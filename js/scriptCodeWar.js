@@ -377,3 +377,8 @@
 // console.log(rentalCarCost(9)); //, 310);
 // console.log(rentalCarCost(10)); //, 350);
 // =====================================
+// function even_or_odd(number) {
+//   return number % 2 === 0 ? 'odd' : 'even';
+// }
+// console.log(even_or_odd(-8));
+// // ==================
