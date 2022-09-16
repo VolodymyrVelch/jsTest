@@ -377,27 +377,3 @@
 // console.log(rentalCarCost(9)); //, 310);
 // console.log(rentalCarCost(10)); //, 350);
 // =====================================
-// function removeExclamationMarks(s) {
-//   return s
-//     .split('')
-//     .filter(sum => sum != '!')
-//     .join('');
-// }
-// console.log(removeExclamationMarks('Hello World!')); //, 'Hello World';
-
-// =====================================
-// function find_average(array) {
-//   // your code here
-//   let num = 0;
-//   for (let arr of array) {
-//     console.log(arr);
-//     if (arr > 0) {
-//       return (num + arr) / array.length;
-//     }
-//     // return 0;
-//     //    aver / array.length ;
-//   }
-// }
-// console.log(find_average([59, 63, 83, 54, 45, 78, 39, 70, 64, 68, 18, 65])); //, 1);
-// console.log(find_average([])); //, 2);
-// console.log(find_average([1, 2, 3, 4])); //, 2.5);
