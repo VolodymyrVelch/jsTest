@@ -1,0 +1,19 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "^c",
+  "scripts": {
+    "test": "^C"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolodymyrVelch/jsTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VolodymyrVelch/jsTest/issues"
+  },
+  "homepage": "https://github.com/VolodymyrVelch/jsTest#readme"
+}
