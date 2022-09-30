@@ -802,20 +802,17 @@
 //   },
 // ];
 
-//   Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів
-//    всіх користувачів (властивість friends). У декількох користувачів можуть бути
-//     однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
+// //   Доповни функцію getFriends(users) таким чином, щоб вона повертала масив друзів
+// //    всіх користувачів (властивість friends). У декількох користувачів можуть бути
+// //     однакові друзі, зроби так, щоб масив, що повертається, не містив повторень.
 
-// Change code below this line
-// const getFriends = function (users) {
-//   const allFriend = users.flatMap(user => user.friends);
-//   const friendsFiltred = allFriend.filter(
-//     (friend, index) => allFriend.indexOf(friend) === index,
-//   );
-//   return friendsFiltred;
-// };
+// // Change code below this line
+// const getFriends = users =>
+//   users
+//     .flatMap(user => user.friends)
+//     .filter((friend, index, array) => array.indexOf(friend) === index);
 // // Change code above this line
-// console.log(getFriends(users));
+// console.table(getFriends(users));
 
 // Оголошена змінна getFriends
 // Змінній getFriends присвоєна стрілочна функція з параметром (users)
